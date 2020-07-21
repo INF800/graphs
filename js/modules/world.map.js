@@ -14,12 +14,13 @@ var ARCS = [
     },{
         origin      : { latitude: 30.194444, longitude: -97.67 },
         destination : { latitude: 25.793333, longitude: -0.290556 }
-    }
+    },
+    { origin: 'RUS', destination: 'USA'}
 ]
 
 function placeBubbles(longit, latid, props, BUBBLES){
     // props looks like { radius  : 20, fillKey : 'gt50', desc: 'xxx' }
-    BUBBLES.push( {name: props.desc, latitude: latid, longitude: longit, radius: props.radius, fillKey: props.fillKey} )
+    BUBBLES.push( {name: props.desc, centered: 'IND', radius: props.radius, fillKey: props.fillKey} )
     map.bubbles( BUBBLES,{
         popupTemplate: function(geo, data) {
             return "<div class='hoverinfo'>" + props.desc + "</div>";
