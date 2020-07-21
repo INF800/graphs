@@ -15,7 +15,7 @@ var ARCS = [
         origin      : { latitude: 30.194444, longitude: -97.67 },
         destination : { latitude: 25.793333, longitude: -0.290556 }
     },
-    { origin: 'RUS', destination: 'IN'}
+    { origin: 'RUS', destination: 'IND'}
 ]
 
 function placeBubbles(longit, latid, props, BUBBLES){
