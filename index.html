@@ -19,6 +19,48 @@
     <body>
         <div id="container-graph"></div>
 
+        <div class="container">
+
+            <label for="cars">Mention starting point:</label>
+            <select name="cars" id="cars">
+              <option value="country1">country1</option>
+              <option value="country2">country2</option>
+              <option value="country3">country3</option>
+              <option value="country4">country4</option>
+            </select>
+            &nbsp;&nbsp;
+            <label for="cars">Mention ending point:</label>
+            <select name="cars" id="cars">
+              <option value="country1">country1</option>
+              <option value="country2">country2</option>
+              <option value="country3">country3</option>
+              <option value="country4">country4</option>
+            </select>
+            &nbsp;&nbsp;
+            <input type="button" value="Find shortest route from">
+            <input type="button" value="Find best route that connects all airports">
+            <input type="button" value="Clear map and build new paths">
+
+
+            <!-- side tags
+                - click on country to remove node from graph
+                - add edges
+            -->
+            <!--
+            <div class="popup">
+                <div class="popup-box">
+                    Add Airport
+                </div>
+                <div class="popup-box">
+                    Add Airport
+                </div>
+            </div>
+            -->
+
+
+
+        </div>
+
         <script src="js/modules/api.js"></script>
         <script src="js/modules/world.map.js"></script>
         <script src="setup.js"></script>

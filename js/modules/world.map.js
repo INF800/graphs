@@ -8,14 +8,19 @@ var BUBBLES = [
 ]
 
 var ARCS = [
-    { 
+    /*{ 
         origin      : { latitude: 40.639722, longitude: 73.778889 },
         destination : { latitude: 37.618889,  longitude: -122.375 }
     },{
         origin      : { latitude: 30.194444, longitude: -97.67 },
         destination : { latitude: 25.793333, longitude: -0.290556 }
-    },
-    { origin: 'RUS', destination: 'IND'}
+    },*/
+    { origin: 'RUS', destination: 'IND'},
+    { origin: 'RUS', destination: 'USA'},
+    { origin: 'RUS', destination: 'CAN'},
+    { origin: 'IND', destination: 'AUS'},
+    { origin: 'ARE', destination: 'AUS'},
+    { origin: 'CAN', destination: 'IND'},
 ]
 
 function placeBubbles(longit, latid, props, BUBBLES){
