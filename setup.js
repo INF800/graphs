@@ -5,12 +5,14 @@ window.addEventListener('load', (event) => {
 
 function __init__(){
     // gen data to plot graph
+    //graph_info = document.getElementById('pre')
     plotGraph(graph_info)
 
     // map to globals
     loadMap()
 
 }
+
 
 const graph_info = {
   "props": {
