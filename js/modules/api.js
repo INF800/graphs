@@ -2,17 +2,16 @@
 
 class APIHandler {
     constructor() {
-      this.contryToLatLong = {
-          "India"           : [ 77, 28],
-          "Afghanistan"     : [ 67, 33],
-};
+      this.x = 0
     }
 
     newNode(country){
-        var props = { radius  : 10, fillKey : 'blot', desc: 'This is '+ country}
-        var [longi, lati] = this.contryToLatLong[country]
+        var props = { radius  : 10, fillKey : 'blue', desc: 'This is '+ country}
+        var [lati, longi] = latLongs[countryName2Id[country]]
 
-        return [longi, lati, props]
+        console.log(latLongs[countryName2Id[country]])
+
+        return [lati, longi, props]
     }
 
 }
