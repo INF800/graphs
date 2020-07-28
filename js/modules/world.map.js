@@ -43,7 +43,9 @@ function placeBubbles(lati, longi, props, BUBBLES){
 }// end placeBubbles
 
 function loadMap(){
-
+    // clear existing
+    graphContainer.innerHTML = null
+    
     map = new Datamap({
         scope: 'world',
         element: graphContainer,
@@ -103,7 +105,10 @@ function loadMap(){
 
 
 // PlotGraph
-function plotGraph(graph_info){
+function genGraphBubblesArcs(graph_info){
+
+    console.log('plotting: ', graph_info)
+
     // clear
     BUBBLES = []
     ARCS = []
@@ -137,12 +142,12 @@ function plotGraph(graph_info){
     for(let i=0; i<graph_info.edges.length; i++){
         var edge = graph_info.edges[i]
 
+        console.log(graph_info.edges[i], __id2coordinate)
+
         ARCS.push({
             origin: { latitude: __id2coordinate[edge['initial']][0], longitude: __id2coordinate[edge['initial']][1] },
             destination : { latitude: __id2coordinate[edge['terminal']][0],  longitude: __id2coordinate[edge['terminal']][1] }
         })
     }
-
-
 }
 

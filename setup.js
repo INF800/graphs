@@ -1,18 +1,26 @@
 window.addEventListener('load', (event) => {
     //alert('page is fully loaded');
-    __init__()
+    __init__(graph_info)
   });
 
-function __init__(){
+function __init__(graph_info_json){
     // gen data to plot graph
-    //graph_info = document.getElementById('pre')
-    plotGraph(graph_info)
+    genGraphBubblesArcs(graph_info_json)
 
     // map to globals
     loadMap()
 
 }
 
+
+function setPre(json_data){
+    document.getElementById("pre").textContent = JSON.stringify(json_data, undefined, 2);
+}
+
+function getJSONFromPre(){
+    ret = JSON.parse( document.getElementById("pre").textContent )
+    return ret
+}
 
 const graph_info = {
   "props": {
@@ -134,3 +142,4 @@ const graph_info = {
       {"initial": 'RUS', 'terminal': 'IRN'}
   ]
 }
+

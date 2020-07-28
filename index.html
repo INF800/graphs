@@ -21,7 +21,7 @@
 
         <div class="container">
 
-            <label for="cars">Mention starting point:</label>
+            <label for="cars">Find shortest route from &nbsp;</label>
             <select name="cars" id="cars">
               <option value="country1">country1</option>
               <option value="country2">country2</option>
@@ -30,7 +30,7 @@
             </select>
             &nbsp;&nbsp;
 
-            <label for="cars">Mention ending point:</label>
+            <label for="cars">to &nbsp;</label>
             <select name="cars" id="cars">
                 <option value="country1">country1</option>
                 <option value="country2">country2</option>
@@ -39,140 +39,20 @@
               </select>
             
             &nbsp;&nbsp;
-            <input type="button" value="Find shortest route from">
+            <input type="button" value="Find shortest route">
             <input type="button" value="Find best route that connects all airports">
             <input id='open-popup' type="button" value="Clear map and build new paths">
 
 
             <div id='popup' class="popup">
                 <h3>Edit Graph</h3>
+
                 <div class="graph-info">
-<pre contenteditable="true" id='pre'>
-{
-    "props": {
-        "plot_dims"    : (100,100),
-        "directed"     : false,
-        "weighted"     : true
-    },
-    "vertices": [
-        {
-            "id"        : 'RUS',
-            "latLong"   : latLongs.RUS,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'CAN',
-            "latLong"   : latLongs.CAN,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'USA',
-            "latLong"   : latLongs.USA,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'CHN',
-            "latLong"   : latLongs.CHN,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'BRA',
-            "latLong"   : latLongs.BRA,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'AUS',
-            "latLong"   : latLongs.AUS,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'IND',
-            "latLong"   : latLongs.IND,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'ARG',
-            "latLong"   : latLongs.ARG,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'KAZ',
-            "latLong"   : latLongs.KAZ,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'DZA',
-            "latLong"   : latLongs.DZA,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'COD',
-            "latLong"   : latLongs.COD,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'GRL',
-            "latLong"   : latLongs.GRL,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'SAU',
-            "latLong"   : latLongs.SAU,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'MEX',
-            "latLong"   : latLongs.MEX,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'IDN',
-            "latLong"   : latLongs.IDN,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'SDN',
-            "latLong"   : latLongs.SDN,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'LBY',
-            "latLong"   : latLongs.LBY,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        },{
-            "id"        : 'IRN',
-            "latLong"   : latLongs.IRN,
-            "color"     : 'blot',
-            'bubbleRad' : 10 
-        }
-    ],
-    
-    "edges" : [
-        {"initial": 'RUS', 'terminal': 'CAN'},
-        {"initial": 'RUS', 'terminal': 'USA'},
-        {"initial": 'RUS', 'terminal': 'CHN'},
-        {"initial": 'RUS', 'terminal': 'BRA'},
-        {"initial": 'RUS', 'terminal': 'AUS'},
-        {"initial": 'RUS', 'terminal': 'IND'},
-        {"initial": 'RUS', 'terminal': 'ARG'},
-        {"initial": 'RUS', 'terminal': 'KAZ'},
-        {"initial": 'RUS', 'terminal': 'DZA'},
-        {"initial": 'RUS', 'terminal': 'COD'},
-        {"initial": 'RUS', 'terminal': 'GRL'},
-        {"initial": 'RUS', 'terminal': 'SAU'},
-        {"initial": 'RUS', 'terminal': 'MEX'},
-        {"initial": 'RUS', 'terminal': 'IDN'},
-        {"initial": 'RUS', 'terminal': 'SDN'},
-        {"initial": 'RUS', 'terminal': 'LBY'},
-        {"initial": 'RUS', 'terminal': 'IRN'}
-    ]
-    }
-    
-</pre>
+                    <pre contenteditable="true" id='pre'></pre>
                 </div>
+
                 <div class="popup-submit">
-                    <input type="button" value="submit">
+                    <input id='submit-new-info' type="button" value="submit">
                     <input id='close-popup' type="button" value="close without changes">
                 </div>
             </div>
