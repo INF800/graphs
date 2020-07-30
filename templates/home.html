@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<section>
+	<div id="container-graph"></div>
+
+	<div class="container">
+
+		<label for="cars">Find shortest route from &nbsp;</label>
+		<select name="cars" id="cars">
+		  <option value="country1">country1</option>
+		  <option value="country2">country2</option>
+		  <option value="country3">country3</option>
+		  <option value="country4">country4</option>
+		</select>
+		&nbsp;&nbsp;
+
+		<label for="cars">to &nbsp;</label>
+		<select name="cars" id="cars">
+			<option value="country1">country1</option>
+			<option value="country2">country2</option>
+			<option value="country3">country3</option>
+			<option value="country4">country4</option>
+		  </select>
+		
+		&nbsp;&nbsp;
+		<input type="button" value="Find shortest route">
+		<input type="button" value="Find best route that connects all airports">
+		<input id='open-popup' type="button" value="Clear map and build new paths">
+
+
+		<div id='popup' class="popup">
+			<h3>Edit Graph</h3>
+
+			<div class="graph-info">
+				<pre contenteditable="true" id='pre'></pre>
+			</div>
+
+			<div class="popup-submit">
+				<input id='submit-new-info' type="button" value="submit">
+				<input id='close-popup' type="button" value="close without changes">
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+
+
+{% endblock %}

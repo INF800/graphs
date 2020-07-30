@@ -52,7 +52,7 @@ body{
 
     text-align: justify;
 } pre {
-    border: 1px solid black;
+    border: 0px solid transparent;
 }
 
 .popup-submit{

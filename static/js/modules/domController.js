@@ -31,6 +31,6 @@ submitNewInfo.addEventListener('click', ()=> {
         }
     });
     
-    
+    // remove popup
     popup.style.display = 'none'
 })
